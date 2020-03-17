@@ -13,7 +13,7 @@ before_install:
   - mysql -e 'CREATE DATABASE acquire;'
 
 script:
-  - phpunit
+#  - phpunit
 
 services:
   - mysql

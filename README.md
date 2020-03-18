@@ -1,4 +1,4 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<p align="center"><img src="https://github.com/SimonAtMuldev/Acquire/blob/master/public/img/acquire.svg" width="400"></p>
 
 <p align="center">
 <a href="https://travis-ci.com/github/SimonAtMuldev/Acquire"><img src="https://travis-ci.com/SimonAtMuldev/Acquire.svg?branch=master" alt="Build Status"></a>

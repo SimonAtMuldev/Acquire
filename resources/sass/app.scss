@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+
+#sidebar-overlay {
+    @apply flex static fixed bg-blue-300 h-full w-2;
+}
+
+#sidebar {
+    opacity: 0;
+    width: 5px;
+    @apply flex static fixed bg-blue-300 h-full px-4 shadow;
+    @apply items-start;
+}
+#sidebar:hover {
+    opacity: 1;
+    width: 250px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    @apply ease-out transition duration-500;
+}
+
+

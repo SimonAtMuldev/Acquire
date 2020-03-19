@@ -17,7 +17,7 @@ class AppController extends Controller
     }
 
 
-    
+
     /**
      * Show the application dashboard.
      *

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="mx-auto h-full flex justify-center items-center bg-gray-300">
-        <div class="w-96 bg-blue-900 rounded-lg shadow-xl p-6">
+        <div class="w-96 bg-blue-800 rounded-lg shadow-xl p-6">
             <div class="flex items-center px-6">@include('partials/logo')</div>
 
             <h1 class="text-white text-2xl pt-5">Welcome back</h1>

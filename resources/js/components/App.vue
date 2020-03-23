@@ -1,23 +1,33 @@
 <template>
     <div class="h-screen bg-white">
-        <h1>{{ title }}</h1>
+        <nav class="">
 
-        <div>
-            <router-link to="/logout" class="flex items-center py-2 hover:text-blue-600 text-sm">
-                <pic-logout />
-                <div class="tracking-wide pl-3">Logout</div>
-            </router-link>
-        </div>
+        </nav>
+
+        <h1>{{ title }}</h1>
+        <router-link to="/logout" class="flex items-center py-2 hover:text-blue-600 text-sm">
+            <IcoLogout />
+            <div class="tracking-wide pl-3">Logout</div>
+        </router-link>
+
+        <router-link to="/logout">
+            <div class="flex-1">
+
+                <IcoLogout class="flex w-3"/>Logout
+            </div>
+
+        </router-link>
     </div>
 </template>
 
 <script>
-    import PicLogout from "./PicLogout";
+    import IcoLogout from "../icons/icoLogout";
 
     export default {
         name: "App",
 
-        components: [ PicLogout ],
+        components: { IcoLogout },
+
 
         created() {
             this.title = this.$route.meta.title;

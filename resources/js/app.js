@@ -4,11 +4,14 @@ import App from './components/App';
 
 require('./bootstrap');
 
-const app = new Vue({
-    el: '#app',
-    components: {
-        App
-    },
-    router
-});
+window.onload = function () {
+    const app = new Vue({
+        el: '#app',
+        components: {
+            App
+        },
+        router
+    });
+
+};
 

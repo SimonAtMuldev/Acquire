@@ -15,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:api')->group(function() {
-    Route::get('/game', 'GameController@index');
-    Route::post('/game', 'GameController@store');
+    Route::get('/game', 'AppController@index');
+//    Route::post('/game', 'GameController@store');
+
 });
 
 

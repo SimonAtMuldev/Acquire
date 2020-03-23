@@ -1914,6 +1914,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Logout",
   created: function created() {
@@ -1934,7 +1935,16 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _PicLogout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PicLogout */ "./resources/js/components/PicLogout.vue");
+/* harmony import */ var _icons_icoLogout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../icons/icoLogout */ "./resources/js/icons/icoLogout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1951,7 +1961,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
-  components: [_PicLogout__WEBPACK_IMPORTED_MODULE_0__["default"]],
+  components: {
+    IcoLogout: _icons_icoLogout__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   created: function created() {
     this.title = this.$route.meta.title;
   },
@@ -1991,10 +2003,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PicLogout.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PicLogout.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/icons/icoLogout.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/icons/icoLogout.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2005,7 +2017,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "PicLogout"
+  name: "icoLogout"
 });
 
 /***/ }),
@@ -19642,29 +19654,42 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "h-screen bg-white" }, [
-    _c("h1", [_vm._v(_vm._s(_vm.title))]),
-    _vm._v(" "),
-    _c(
-      "div",
-      [
+  return _c(
+    "div",
+    { staticClass: "h-screen bg-white" },
+    [
+      _c("nav", {}),
+      _vm._v(" "),
+      _c("h1", [_vm._v(_vm._s(_vm.title))]),
+      _vm._v(" "),
+      _c(
+        "router-link",
+        {
+          staticClass: "flex items-center py-2 hover:text-blue-600 text-sm",
+          attrs: { to: "/logout" }
+        },
+        [
+          _c("IcoLogout"),
+          _vm._v(" "),
+          _c("div", { staticClass: "tracking-wide pl-3" }, [_vm._v("Logout")])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("router-link", { attrs: { to: "/logout" } }, [
         _c(
-          "router-link",
-          {
-            staticClass: "flex items-center py-2 hover:text-blue-600 text-sm",
-            attrs: { to: "/logout" }
-          },
+          "div",
+          { staticClass: "flex-1" },
           [
-            _c("pic-logout"),
-            _vm._v(" "),
-            _c("div", { staticClass: "tracking-wide pl-3" }, [_vm._v("Logout")])
+            _c("IcoLogout", { staticClass: "flex w-3" }),
+            _vm._v("Logout\n        ")
           ],
           1
         )
-      ],
-      1
-    )
-  ])
+      ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -19697,10 +19722,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PicLogout.vue?vue&type=template&id=c718d84e&scoped=true&":
-/*!************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PicLogout.vue?vue&type=template&id=c718d84e&scoped=true& ***!
-  \************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/icons/icoLogout.vue?vue&type=template&id=691b8a88&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/icons/icoLogout.vue?vue&type=template&id=691b8a88&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -19715,14 +19740,37 @@ var render = function() {
   return _c(
     "svg",
     {
-      staticClass: "fill-current text-blue-600 w-5 h-5",
-      attrs: { viewBox: "0 0 24 24" }
+      staticStyle: { "enable-background": "new 0 0 489.9 489.9" },
+      attrs: {
+        version: "1.1",
+        id: "IconsRepoEditor",
+        xmlns: "http://www.w3.org/2000/svg",
+        "xmlns:xlink": "http://www.w3.org/1999/xlink",
+        x: "0px",
+        y: "0px",
+        viewBox: "0 0 489.9 489.9",
+        "xml:space": "preserve",
+        width: "100px",
+        height: "100px",
+        fill: "#6172c4",
+        stroke: "#6172c4",
+        "stroke-width": "4"
+      }
     },
     [
+      _c("g", { attrs: { id: "IconsRepo_bgCarrier" } }),
+      _vm._v(" "),
       _c("path", {
         attrs: {
           d:
-            "M21 3h-3.8c-.7 0-1.3-.6-1.3-1.3S16.5.4 17.2.4h5.1c.7 0 1.3.6 1.3 1.3v20.5c0 .7-.6 1.3-1.3 1.3h-5.1c-.7 0-1.3-.6-1.3-1.3 0-.7.6-1.3 1.3-1.3H21V3zm-6.9 7.7L8.6 5.2c-.5-.5-.6-1.3-.1-1.8s1.3-.5 1.8 0l7.7 7.7c.8.8.2 2.2-.9 2.2H1.8c-.7 0-1.3-.6-1.3-1.3 0-.7.6-1.3 1.3-1.3h12.3zm-1.6 4.8c.5-.5 1.3-.4 1.8.1s.4 1.3-.1 1.8l-3.8 3.2c-.5.5-1.3.4-1.8-.1-.6-.5-.5-1.3 0-1.7l3.9-3.3z"
+            "M468.3,255.8c0.1-0.1,0.1-0.1,0.2-0.2c0.3-0.4,0.6-0.7,0.8-1.1c0.1-0.1,0.1-0.2,0.2-0.3c0.2-0.4,0.5-0.8,0.7-1.2 c0-0.1,0.1-0.2,0.1-0.2c0.2-0.4,0.4-0.8,0.6-1.3c0-0.1,0-0.1,0.1-0.2c0.2-0.4,0.3-0.9,0.5-1.4c0-0.1,0-0.2,0.1-0.2 c0.1-0.5,0.3-0.9,0.3-1.4c0-0.2,0-0.3,0.1-0.5c0.1-0.4,0.1-0.8,0.2-1.2c0.1-0.6,0.1-1.1,0.1-1.7c0-0.6,0-1.1-0.1-1.7 c0-0.4-0.1-0.8-0.2-1.2c0-0.2,0-0.3-0.1-0.5c-0.1-0.5-0.2-0.9-0.3-1.4c0-0.1,0-0.2-0.1-0.2c-0.1-0.5-0.3-0.9-0.5-1.4 c0-0.1,0-0.1-0.1-0.2c-0.2-0.4-0.4-0.9-0.6-1.3c0-0.1-0.1-0.2-0.1-0.2c-0.2-0.4-0.4-0.8-0.7-1.2c-0.1-0.1-0.1-0.2-0.2-0.3 c-0.3-0.4-0.5-0.8-0.8-1.1c-0.1-0.1-0.1-0.1-0.2-0.2c-0.4-0.4-0.7-0.9-1.2-1.3l-98.9-98.8c-6.7-6.7-17.6-6.7-24.3,0 c-6.7,6.7-6.7,17.6,0,24.3l69.6,69.6H136.8c-9.5,0-17.2,7.7-17.2,17.1c0,9.5,7.7,17.2,17.2,17.2h276.8l-69.1,69.1 c-6.7,6.7-6.7,17.6,0,24.3c3.3,3.3,7.7,5,12.1,5s8.8-1.7,12.1-5l98.3-98.3C467.5,256.6,467.9,256.2,468.3,255.8z"
+        }
+      }),
+      _vm._v(" "),
+      _c("path", {
+        attrs: {
+          d:
+            "M110.7,34.3h128c9.5,0,17.2-7.7,17.2-17.1c0-9.5-7.7-17.2-17.2-17.2h-128C59.4,0,17.6,41.8,17.6,93.1v303.7 c0,51.3,41.8,93.1,93.1,93.1h125.9c9.5,0,17.2-7.7,17.2-17.1c0-9.5-7.7-17.2-17.2-17.2H110.7c-32.4,0-58.8-26.4-58.8-58.8V93.1 C52,60.6,78.3,34.3,110.7,34.3z"
         }
       })
     ]
@@ -34911,13 +34959,15 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app',
-  components: {
-    App: _components_App__WEBPACK_IMPORTED_MODULE_2__["default"]
-  },
-  router: _router__WEBPACK_IMPORTED_MODULE_1__["default"]
-});
+window.onload = function () {
+  var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
+    el: '#app',
+    components: {
+      App: _components_App__WEBPACK_IMPORTED_MODULE_2__["default"]
+    },
+    router: _router__WEBPACK_IMPORTED_MODULE_1__["default"]
+  });
+};
 
 /***/ }),
 
@@ -35092,17 +35142,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/PicLogout.vue":
-/*!***********************************************!*\
-  !*** ./resources/js/components/PicLogout.vue ***!
-  \***********************************************/
+/***/ "./resources/js/icons/icoLogout.vue":
+/*!******************************************!*\
+  !*** ./resources/js/icons/icoLogout.vue ***!
+  \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _PicLogout_vue_vue_type_template_id_c718d84e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PicLogout.vue?vue&type=template&id=c718d84e&scoped=true& */ "./resources/js/components/PicLogout.vue?vue&type=template&id=c718d84e&scoped=true&");
-/* harmony import */ var _PicLogout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PicLogout.vue?vue&type=script&lang=js& */ "./resources/js/components/PicLogout.vue?vue&type=script&lang=js&");
+/* harmony import */ var _icoLogout_vue_vue_type_template_id_691b8a88_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./icoLogout.vue?vue&type=template&id=691b8a88&scoped=true& */ "./resources/js/icons/icoLogout.vue?vue&type=template&id=691b8a88&scoped=true&");
+/* harmony import */ var _icoLogout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icoLogout.vue?vue&type=script&lang=js& */ "./resources/js/icons/icoLogout.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -35112,50 +35162,50 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _PicLogout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _PicLogout_vue_vue_type_template_id_c718d84e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _PicLogout_vue_vue_type_template_id_c718d84e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _icoLogout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _icoLogout_vue_vue_type_template_id_691b8a88_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _icoLogout_vue_vue_type_template_id_691b8a88_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "c718d84e",
+  "691b8a88",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/PicLogout.vue"
+component.options.__file = "resources/js/icons/icoLogout.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/PicLogout.vue?vue&type=script&lang=js&":
-/*!************************************************************************!*\
-  !*** ./resources/js/components/PicLogout.vue?vue&type=script&lang=js& ***!
-  \************************************************************************/
+/***/ "./resources/js/icons/icoLogout.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ./resources/js/icons/icoLogout.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PicLogout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./PicLogout.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PicLogout.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PicLogout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_icoLogout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./icoLogout.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/icons/icoLogout.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_icoLogout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/components/PicLogout.vue?vue&type=template&id=c718d84e&scoped=true&":
-/*!******************************************************************************************!*\
-  !*** ./resources/js/components/PicLogout.vue?vue&type=template&id=c718d84e&scoped=true& ***!
-  \******************************************************************************************/
+/***/ "./resources/js/icons/icoLogout.vue?vue&type=template&id=691b8a88&scoped=true&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/icons/icoLogout.vue?vue&type=template&id=691b8a88&scoped=true& ***!
+  \*************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PicLogout_vue_vue_type_template_id_c718d84e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./PicLogout.vue?vue&type=template&id=c718d84e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PicLogout.vue?vue&type=template&id=c718d84e&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PicLogout_vue_vue_type_template_id_c718d84e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_icoLogout_vue_vue_type_template_id_691b8a88_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./icoLogout.vue?vue&type=template&id=691b8a88&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/icons/icoLogout.vue?vue&type=template&id=691b8a88&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_icoLogout_vue_vue_type_template_id_691b8a88_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PicLogout_vue_vue_type_template_id_c718d84e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_icoLogout_vue_vue_type_template_id_691b8a88_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -35182,12 +35232,6 @@ __webpack_require__.r(__webpack_exports__);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
-    path: '/',
-    component: Home,
-    meta: {
-      title: 'Home'
-    }
-  }, {
     path: '/game',
     component: _components_Game__WEBPACK_IMPORTED_MODULE_3__["default"],
     meta: {

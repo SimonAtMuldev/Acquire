@@ -2,6 +2,7 @@
     <div class="flex-1 items-center">
         <img alt="Logout" src="/img/logout.gif">
     </div>
+
 </template>
 
 <script>

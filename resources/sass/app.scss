@@ -21,4 +21,28 @@
 
 }
 
+.avatar {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+// User menu Style
+.UserMenu {
+    @apply absolute right-0 flex-col whitespace-no-wrap rounded-lg;
+    @apply block px-2 py-1 font-semibold;
+    @apply text-center shadow-xl text-green-300 px-4 pb-2 bg-blue-700 top-auto;
+}
+.UserMenuItem {
+    @apply py-2;
+
+
+    &:hover {
+        @apply bg-gray-800 rounded-lg;
+
+    }
+}
+
+
+
 

@@ -8,6 +8,12 @@ class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
+     * Roles and Responsibilities:
+     *  1) Admin with no restrictions
+     *  2) Editor
+     *  3) Author (page creator)
+     *  4) Test Pilot
+     *  5) User
      *
      * @return void
      */
@@ -16,7 +22,10 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('display_name');
             $table->string('email')->unique();
+            $table->integer('role')->default(5);
+            $table->integer('wins')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('api_token');

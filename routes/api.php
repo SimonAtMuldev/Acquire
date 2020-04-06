@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
 Route::middleware('auth:api')->group(function() {
-    Route::get('/game', 'AppController@index');
+    Route::get('/app', 'AppController@index');
+    Route::get('/users', 'UserController@userList');
+    Route::get('/users/{user}', 'UserController@show');
+
 //    Route::post('/game', 'GameController@store');
 
 });

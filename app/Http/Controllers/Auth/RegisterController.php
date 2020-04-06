@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = RouteServiceProvider::LOBBY;
 
     /**
      * Create a new controller instance.
@@ -70,6 +70,7 @@ class RegisterController extends Controller
             'email'     => $data['email'],
             'password'  => Hash::make($data['password']),
             'api_token' => Str::random(32),
+            'wins'      => 0,
             'role'      => 1,
         ]);
     }

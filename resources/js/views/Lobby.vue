@@ -1,10 +1,11 @@
 <template>
-    <h1>Live game content</h1>
+    <h1>Views Home</h1>
+
 </template>
 
 <script>
     export default {
-        name: "Game"
+        name: "Lobby"
     }
 </script>
 

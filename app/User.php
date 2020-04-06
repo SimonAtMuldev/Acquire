@@ -16,8 +16,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'api_token', 'role',
+        'name', 'display_name', 'email', 'password', 'api_token', 'role', 'wins'
     ];
+
+    public function path()
+    {
+        return '/users/' . $this->id;
+    }
 
     /**
      * The attributes that should be hidden for arrays.
@@ -36,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function games() {
+        return $this->belongsToMany(Game::class)->withTimestamps();
+    }
+
 }
